@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp">
     <link rel="icon" type="image/x-icon" href="/img/logo.png">
+    <script src="https://kit.fontawesome.com/552913982b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -70,7 +71,7 @@
 
         <main>
             <div class="search">
-                <input type="text" placeholder="Search Reddit">
+                <input type="text" placeholder=" &#xf002; Search Reddit">
                 <button>Search</button>
             </div>
 
@@ -90,6 +91,7 @@
                     <button><span class="material-symbols-sharp">send</span>Share</button>
                 </div>
             </div>
+            <hr>
             <div class="post">
                 <div class="top">
                     <img src="./img/bf.jpg" alt="usi">
@@ -106,6 +108,7 @@
                     <button><span class="material-symbols-sharp">send</span>Share</button>
                 </div>
             </div>
+            <hr>
             <div class="post">
                 <div class="top">
                     <img src="./img/communityIcon_9ggb2zkszbf91.png" alt="usi">
@@ -122,6 +125,7 @@
                     <button><span class="material-symbols-sharp">send</span>Share</button>
                 </div>
             </div>
+            <hr>
             <div class="post">
                 <div class="top">
                     <img src="./img/ipl.jpg" alt="usi">
@@ -140,6 +144,7 @@
                     <button><span class="material-symbols-sharp">send</span>Share</button>
                 </div>
             </div>
+            <hr>
             <div class="post">
                 <div class="top">
                     <img src="./img/indiasocial.png" alt="usi">
@@ -156,31 +161,138 @@
                     <button><span class="material-symbols-sharp">send</span>Share</button>
                 </div>
             </div>
-
         </main>
+
+        <div class="appPopup" id="appPopup">
+            <h2>Scan to Get App</h2>
+            <img src="./img/qrcode.png" alt="qrcode">
+            <button onclick="closeAppPopup()">Close</button>
+        </div>
+
+        <div class="loginPopup" id="loginPopup">
+            <h2><b>Log In</b></h2>
+            <p>By continuing, you agree to our User Agreement and acknowledge that you understand the Privacy Policy.
+            </p>
+            <input type="text" placeholder="Username" id="username">
+            <input type="password" placeholder="Password" id="password">
+            <button onclick="login()">Log In</button>
+            <button onclick="closeLogin()">Close</button>
+        </div>
 
         <div class="right">
             <div class="top">
-                <button id="menu-btn">
-                    <span class="material-symbols-sharp">menu</span>
-                </button>
                 <div class="theme-toggler">
                     <span class="material-symbols-sharp active">light_mode</span>
                     <span class="material-symbols-sharp">dark_mode</span>
                 </div>
                 <div class="profile">
-                    <div class="info">
+                    <!-- <div class="info">
                         <p>Hey, <b>Yash</b></p>
                     </div>
                     <div class="profile-photo">
                         <img src="./img/profile-2.jpg" alt="img">
-                    </div>
+                    </div> -->
+
+                    <button onclick="openAppPopup()"><span class="material-symbols-sharp">
+                            qr_code_scanner
+                        </span> Get App</button>
+                    <button onclick="openLogin()">Log In</button>
                 </div>
             </div>
 
             <div class="recent-updates">
                 <h2>Popular Communities</h2>
                 <div class="updates">
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="./img/askreddit.png" alt="img1">
+                        </div>
+                        <div class="message">
+                            <p><b>r/AskReddit</b></p>
+                            <small class="text-muted">44,289,061 members</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="./img/leagueoflegends.png" alt="img1">
+                        </div>
+                        <div class="message">
+                            <p><b>r/leagueoflegends</b></p>
+                            <small class="text-muted">6,894,098 members</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="./img/outoftheloop.png" alt="img1">
+                        </div>
+                        <div class="message">
+                            <p><b>r/OutOfTheLoop</b></p>
+                            <small class="text-muted">3,252,800 members</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="./img/discord-logo-png-7617.png" alt="img1">
+                        </div>
+                        <div class="message">
+                            <p><b>r/discordapp</b></p>
+                            <small class="text-muted">1,113,912 members</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="./img/twitch-logo-png-1883.png" alt="img1">
+                        </div>
+                        <div class="message">
+                            <p><b>r/Twitch</b></p>
+                            <small class="text-muted">1,783,198 members</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="./img/askreddit.png" alt="img1">
+                        </div>
+                        <div class="message">
+                            <p><b>r/AskReddit</b></p>
+                            <small class="text-muted">44,289,061 members</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="./img/leagueoflegends.png" alt="img1">
+                        </div>
+                        <div class="message">
+                            <p><b>r/leagueoflegends</b></p>
+                            <small class="text-muted">6,894,098 members</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="./img/outoftheloop.png" alt="img1">
+                        </div>
+                        <div class="message">
+                            <p><b>r/OutOfTheLoop</b></p>
+                            <small class="text-muted">3,252,800 members</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="./img/discord-logo-png-7617.png" alt="img1">
+                        </div>
+                        <div class="message">
+                            <p><b>r/discordapp</b></p>
+                            <small class="text-muted">1,113,912 members</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="./img/twitch-logo-png-1883.png" alt="img1">
+                        </div>
+                        <div class="message">
+                            <p><b>r/Twitch</b></p>
+                            <small class="text-muted">1,783,198 members</small>
+                        </div>
+                    </div>
                     <div class="update">
                         <div class="profile-photo">
                             <img src="./img/askreddit.png" alt="img1">
